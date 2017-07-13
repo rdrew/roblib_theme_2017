@@ -1,0 +1,128 @@
+/******************************
+ Global CSS for ALL menu types
+******************************/
+
+
+// this keeps the sub menu on top 
+div#menu-bar {
+    z-index: 500;
+    position: relative;
+}
+//////////////////////////////
+ul.nice-menu-down,
+ul.nice-menu-down ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  // border-top: 1px solid #ccc;
+}
+
+ul.nice-menu-down li {
+  // border: 1px solid #ccc;
+
+  border-top: 0;
+  float: left; /* LTR */
+  // background-color: #eee;
+}
+
+ul.nice-menu-down a {
+  // padding: 0.3em 5px 0.3em 5px;
+   padding: 5px 16px 10px 16px;
+}
+
+ul.nice-menu-down ul {
+  // top: 1.8em;
+  left: -1px; /* LTR */
+  border: 0;
+  // border-top: 1px solid #ccc;
+  margin-right: 0; /* LTR */
+}
+
+ul.nice-menu-down ul li {
+  width: 12.5em;
+}
+
+
+/*****************************************************/
+// colors
+
+$green: #5b8c1f;
+
+ul.nice-menu-down {
+  float: left; /* LTR */
+  border: 0;
+}
+ul.nice-menu-down {
+  a {
+     -webkit-border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-topright: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    color: white;
+        &.active{
+          color: #333;
+          background: #f5f4f3;
+        }
+  }
+}
+
+ul.nice-menu-down > li {
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-topright: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+      // border-top: 1px solid #ccc;
+      &.active {
+
+      }
+
+}
+
+ul.nice-menu-down li li {
+  border-top: 0;
+  background: $green;
+  a {
+    color:#fff;
+  }
+}
+
+ul.nice-menu-down ul {
+  left: 0; /* LTR */
+}
+
+ul.nice-menu-down ul li {
+  clear: both;
+}
+
+ul.nice-menu-down li ul li ul {
+  left: 12.5em; /* LTR */
+  top: -1px;
+}
+
+ul.nice-menu-down .menuparent a {
+  padding-right: 15px; /* LTR */
+}
+
+ul.nice-menu-down li.menuparent {
+  background: #333 url("../images/arrow-down.png") right center no-repeat; /* LTR */
+}
+
+ul.nice-menu-down li:hover {
+  background: $green;
+}
+
+ul.nice-menu-down li.menuparent:hover {
+  background: $green url("../images/arrow-down.png") right center no-repeat; /* LTR */
+}
+
+ul.nice-menu-down li li.menuparent {
+  background: $green url("../images/arrow-right.png") right center no-repeat; /* LTR */
+}
+
+ul.nice-menu-down li li.menuparent:hover {
+  background: lighten($green, 10%) url("../images/arrow-right.png") right center no-repeat; /* LTR */
+}

@@ -1,0 +1,421 @@
+/* @override 
+  http://roblib.local:8083/sites/all/themes/roblib_theme/css/roblib_theme.css?n4g174 */
+/* **************************************
+/ Typography
+/************************************** */
+/* line 22, roblib_theme.scss */
+#site-name a {
+  letter-spacing: 0px;
+}
+
+/* **************************************
+/ Global stuff
+/************************************** */
+/* line 28, roblib_theme.scss */
+#top-panels-wrapper {
+  border-top: 1px solid #f5f4f3;
+  padding-top: 20px;
+}
+
+/* **************************************
+/ Main Nav Bar
+/************************************** */
+/* line 34, roblib_theme.scss */
+#menu-bar {
+  float: right;
+}
+
+/* line 35, roblib_theme.scss */
+.nav .block-menu ul a {
+  padding: 0.3em 1em;
+  text-decoration: none;
+  float: left;
+}
+
+/***************************************
+/ Header
+/************************************** */
+/* line 41, roblib_theme.scss */
+#logo {
+  border-right: solid #a8a9a7 1px;
+}
+
+/* line 42, roblib_theme.scss */
+#site-name {
+  padding-left: 10px;
+  font-variant: small-caps;
+}
+
+/* line 43, roblib_theme.scss */
+#branding {
+  padding: 14px 0 10px 25px;
+  display: table-cell;
+}
+
+/* line 44, roblib_theme.scss */
+#header-wrapper {
+  background-color: #f5f4f3;
+  border-bottom: 1px solid #cdcdcc;
+}
+
+/* color overide */
+/* line 46, roblib_theme.scss */
+.nav .block-menu ul li a.active {
+  color: #333333;
+  background-color: #f5f4f3;
+}
+
+/* line 47, roblib_theme.scss */
+.region-header {
+  padding: 0;
+  line-height: 100%;
+}
+
+/***************************************
+/ pre-footer
+/************************************** */
+/* line 53, roblib_theme.scss */
+#tertiary-content-wrapper {
+  margin-bottom: 0px;
+  background-color: #a8a9a7;
+  text-align: center;
+  border-bottom: 1px solid #363636;
+}
+/* line 59, roblib_theme.scss */
+#tertiary-content-wrapper p {
+  padding-top: 20px;
+}
+
+/* **************************************
+/ footer
+/************************************** */
+/* line 68, roblib_theme.scss */
+#footer-panels-wrapper {
+  background: #363636;
+  padding: 25px 0 10px;
+  margin-bottom: 0px;
+  border-top: 1px solid #989996;
+}
+
+/* line 69, roblib_theme.scss */
+#footer-wrapper {
+  background-color: #2c2c2c;
+}
+
+/* *****************************
+/   Footer links
+***************************** */
+/* line 75, roblib_theme.scss */
+.footer-links {
+  border-left: 1px solid #a8a9a7;
+  padding-left: 15px;
+  margin-left: 20px;
+}
+/* line 80, roblib_theme.scss */
+.footer-links h2.title {
+  color: #fff;
+  font-size: 1em;
+}
+/* line 84, roblib_theme.scss */
+.footer-links ul {
+  list-style-image: none;
+  line-height: 95%;
+}
+/* line 88, roblib_theme.scss */
+.footer-links a {
+  color: #ccc;
+  font-size: 12px;
+}
+/* line 92, roblib_theme.scss */
+.footer-links a:hover {
+  text-decoration: underline;
+}
+/* line 95, roblib_theme.scss */
+.footer-links ul li.leaf {
+  list-style-image: none;
+  list-style-type: none;
+}
+
+/* line 97, roblib_theme.scss */
+.footer-links.menu-01 {
+  border-left: none;
+}
+
+/* *****************************
+/   SubFooter
+***************************** */
+/* line 120, roblib_theme.scss */
+.links-last {
+  color: #a8a9a7;
+  display: flex;
+}
+/* line 121, roblib_theme.scss */
+.links-last a {
+  color: #ccc;
+  font-size: .8em;
+}
+/* line 122, roblib_theme.scss */
+.links-last a:hover {
+  text-decoration: underline;
+}
+/* line 123, roblib_theme.scss */
+.links-last a:first-child {
+  color: #ccc;
+  font-size: .8em;
+}
+
+/* line 125, roblib_theme.scss */
+.address {
+  color: white;
+  line-height: 60%;
+  font-size: .8em;
+  padding-bottom: 5px;
+}
+
+/* line 126, roblib_theme.scss */
+.addressleft {
+  float: left;
+}
+
+/* line 127, roblib_theme.scss */
+#address_right {
+  padding-top: 20px;
+}
+
+/* line 128, roblib_theme.scss */
+.footerlogo {
+  float: left;
+  padding-top: 10px;
+  margin: 0 0 0 22px;
+}
+
+/* line 129, roblib_theme.scss */
+.footeraddress {
+  padding: 30px 0 0 42px;
+}
+
+/* line 130, roblib_theme.scss */
+.socialmedia {
+  float: left;
+  padding-top: 20px;
+}
+/* line 131, roblib_theme.scss */
+.socialmedia ul {
+  height: auto;
+  padding: 8px 0px;
+  margin: 0px;
+}
+/* line 132, roblib_theme.scss */
+.socialmedia li {
+  display: inline;
+}
+/* line 133, roblib_theme.scss */
+.socialmedia a {
+  padding: 0 2px;
+}
+
+/* **************************************
+/ layout testing
+/************************************** */
+/* line 139, roblib_theme.scss */
+#ult {
+  background-color: brown;
+  width: 100%;
+  height: 280px;
+  margin: 0 auto;
+}
+
+/* line 140, roblib_theme.scss */
+#ull {
+  width: 89%;
+  height: 70px;
+  margin: 0 auto;
+}
+
+/* line 141, roblib_theme.scss */
+.content-style {
+  min-height: 0;
+}
+
+/* line 142, roblib_theme.scss */
+#uri {
+  background-color: green;
+  height: 400px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* line 143, roblib_theme.scss */
+.node-flex-gallery {
+  margin-bottom: -41px;
+}
+
+/* **************************************
+/ Quick tab styles
+/************************************** */
+/* line 149, roblib_theme.scss */
+ul.quicktabs-tabs.quicktabs-style-zen li {
+  margin: 0px;
+}
+
+/* line 151, roblib_theme.scss */
+div#quicktabs-container-search_tab_test {
+  background-color: white;
+}
+
+/* line 152, roblib_theme.scss */
+div#quicktabs-search_tab_test {
+  border: 1px solid #cdcdcc;
+  border-radius: 6px;
+  background-color: white;
+}
+
+/* line 153, roblib_theme.scss */
+#quicktabs-search_tab_test .node-inner {
+  padding: 10px;
+}
+
+/* line 154, roblib_theme.scss */
+div.item-list.item-list-q {
+  background-color: #eaeae8;
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+/* **************************************
+/ Center Nav bar (full)
+/************************************** */
+/* line 160, roblib_theme.scss */
+ul.nice-menu {
+  float: left;
+  border: 0;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #363636;
+  height: 75px;
+}
+/* line 170, roblib_theme.scss */
+ul.nice-menu li {
+  width: 12%;
+  float: left;
+  /* LTR */
+}
+/* line 174, roblib_theme.scss */
+ul.nice-menu a {
+  text-align: center;
+  height: 61px;
+  color: #f3f3f1;
+  padding-top: 1em;
+  font-size: .9em;
+}
+/* line 181, roblib_theme.scss */
+ul.nice-menu a:hover {
+  color: #8c2004;
+  background-color: #C2C2C2;
+}
+
+/* line 186, roblib_theme.scss */
+nav#block-nice-menus-1 {
+  margin-bottom: 0px;
+}
+
+/* line 189, roblib_theme.scss */
+.icon.fontello {
+  height: 1em;
+}
+
+/* line 192, roblib_theme.scss */
+i.icon.fontello {
+  font-size: 2.5em;
+  padding-bottom: 5px;
+}
+
+/* line 196, roblib_theme.scss */
+.section-printing .nice-menu .active, .section-study-space .nice-menu .active, .section-computers .nice-menu .active, .section-ask-us .nice-menu .active, .section-hours .nice-menu .active, .section-calendar .nice-menu .active, .section-workshops .nice-menu .active, .section-contact-us .nice-menu .active {
+  background-color: #8c2004;
+  border-bottom: 10px solid #8c2004;
+  color: #f3f3f1;
+  border-radius: 0 0 10px 10px;
+}
+
+/***************************************
+/ Center Nav bar (responsive)
+/************************************** */
+/* line 207, roblib_theme.scss */
+.responsive-menus.responsified .responsive-menus-simple li a {
+  color: #fff;
+  display: block;
+  padding: 1em 5%;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/***************************************
+/ Library Hours (block)
+/************************************** */
+/* line 213, roblib_theme.scss */
+.view-display-id-block_1 .fc-event-default, .view-display-id-block_1 .fc-event-default .fc-event-skin, .view-display-id-block_1 .fc-event-default .fc-event-time, .view-display-id-block_1 .fc-event-default a, .view-display-id-block_1 th, .view-display-id-block_1 thead, .view-display-id-block_1 thead th {
+  border: none;
+  background: none;
+  color: #252525;
+}
+
+/* line 214, roblib_theme.scss */
+.view-display-id-block_1 .fc-state-highlight {
+  background: none;
+}
+
+/* line 215, roblib_theme.scss */
+.fc-border-separate th, .fc-border-separate td, .fc-border-separate tr, .fc-border-separate tr {
+  border: none;
+}
+
+/* line 216, roblib_theme.scss */
+.view-display-id-block_1 th, .view-display-id-block_1 thead, .view-display-id-block_1 thead th {
+  background: none;
+  border: none;
+  color: #252525;
+}
+
+/* line 217, roblib_theme.scss */
+div.fc-event-inner.fc-event-skin {
+  text-align: center;
+}
+
+/*span.fc-event-time { display: inline-block; }
+div.fc-event-inner.fc-event-skin {
+    width: 200px;
+}
+div.fullcalendar.jquery-once-1-processed.fc {
+    width: 200px;
+}*/
+/* line 225, roblib_theme.scss */
+span.fc-event-title {
+  display: none;
+}
+
+/* line 228, roblib_theme.scss */
+.fc-event-time:before {
+  content: "Today's Hours: ";
+  display: inline-block;
+  width: 100px;
+}
+
+/***************************************
+/ Quick tabs
+/************************************** */
+/* line 236, roblib_theme.scss */
+div#quicktabs-search_tab_test label {
+  display: inline;
+}

@@ -1,0 +1,447 @@
+@import "roblib-search";
+@import "megamenu";
+.hide-on-desktop {
+  @include breakpoint(980px) {
+    display: none;
+  }
+}
+/*====================================
+=            landing page            =
+====================================*/
+.front #main-content {
+    display: none;
+}
+/*=====  landing page  ======*/
+
+
+/* ==========================================================================
+  logo in the menubar
+  ========================================================================== */
+
+@mixin link-transition() { a { @include transition(color .5s);
+        &:hover { color: lighten($red, 10%) }
+    }
+}
+
+
+#menu-bar-wrapper { -webkit-box-shadow: 0 3px 2px #777; -moz-box-shadow: 0 3px 2px #777; box-shadow: 0 3px 2px #777; }
+// remove the borders
+#header-wrapper, #top-panels-wrapper { border: 0px; }
+#menu-bar-wrapper .container { max-width: 100%; }
+.menu-wrapper { margin: 0px; }
+div#menu-bar-wrapper { padding: 0 10px; }
+#menu-bar .block { margin-bottom: 0px; clear: initial; }
+#menu-bar div.contextual-links-wrapper { 
+  right: 0px; z-index: 10000;
+    }
+#menu-bar .megamenu > .contextual-links-wrapper { 
+  right: 450px; z-index: 10000;
+    }    
+// layout
+#menu-bar {
+  @include container(100%);
+  @include breakpoint(0 980px) {
+    padding-bottom: 5px;
+  }
+}
+
+#menu-bar .todays-hours { @include link-transition();} 
+#site-name { @include link-transition();}
+#header-wrapper, #top-panels-wrapper { border-bottom: 0px; }
+.upei-branding { .block { float: left; }
+    .block-inner { margin-left: 0px; }
+}
+.upei-branding .inside { margin: 0px !important; }
+#site-name { margin: 0px; padding: 0px; line-height: 0; font-size: 1.6em !important; line-height: 1; display: block; word-wrap: normal;
+    a { text-transform: lowercase; font-variant: small-caps; font-family: Georgia, Baskerville, Palatino, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif; color: #fff; }
+}
+.site-name { width: 125px; margin-top: 5px;}
+.logo { width: 154px; line-height: 0px; padding: 4px 0; }
+#logo { display: table-cell; padding: 0 10px 0 0; }
+
+.todays-hours { margin-top: 7px; text-align: center; background-color: dimgrey; border-radius: 4px; }
+
+.todays-hours.mobile { 
+      display: none;
+    @include breakpoint(980px) {
+      display: block;
+      float: right; }
+     @include breakpoint(1020px) {
+      display: none;} 
+}
+
+.upei-branding {
+  @include span(280px);
+  @include breakpoint(980px) {
+  @include span(100%);
+  }
+  @include breakpoint(1020px) {
+    @include span(280px);
+    margin-right: 20px;
+    position: absolute;
+    z-index: 500;
+  }
+}
+
+.megamenu {
+  @include breakpoint(980px) {
+    padding-top: 5px;
+    @include span(100%);
+  }
+  @include breakpoint(1020px) {
+    // width: initial;
+    // margin-right: 20px;
+    width: 100%;
+
+    #tb-megamenu-menu-center-navigation {
+      width: 700px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.megamenu {
+  @include breakpoint(980px 1020px) {
+    border-top: 2px groove #5A5A5A;
+    margin-top: 4px;
+  }
+  @include breakpoint(1020px) {
+  }
+}
+
+.todays-hours.desktop {
+  display: none;
+  @include breakpoint(1020px) {
+    display: block;
+    width: 180px;
+    float: right;
+    position: absolute;
+    right: 10px;
+  }
+}
+
+@include breakpoint(1020px 1275px) {
+  .logo {
+    display: none;
+  }
+}
+/* ==========================================================================
+  todays hours
+  ========================================================================== */
+
+#menu-bar .todays-hours { // float: right !important;
+    a { color: #fff; font-size: .9em; }
+}
+
+// nav button
+.megamenu button {
+    background-color: none;
+    background: none !important;
+    border: 0px !important;
+    box-shadow: none !important;
+}
+.tb-megamenu .btn-navbar {
+    margin-bottom: 0px;
+}
+.megamenu {
+  i.fa {
+    font-size: 1.6em;
+  }
+  i.fa.fa-reorder {
+    font-size: 3em;
+    margin-bottom: 0px;
+  }
+}
+// icons
+
+  .megamenu .dropdown-toggle i.fa {
+        @include breakpoint(980px) {
+        display: block;
+        text-align: center;
+        font-size: 2.4em;}
+}
+
+// dropdown
+@media (max-width: 979px) {
+.tb-megamenu .nav-collapse {
+    background: #333;
+    margin-top: 10px;
+    position: absolute;
+    top: 54px;
+    width: 278px;
+    z-index: 999;
+    right: 00px;
+}
+.tb-megamenu .nav-collapse .nav li a {
+    margin-bottom: 0;
+    border-top: 1px solid #d9d9d9;    
+  }
+.tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child {
+    background-color: #525252;
+}
+
+}
+.tb-megamenu .tb-block .block-title{
+    font-size: 1.6em;
+    line-height: initial;
+    font-weight: 700;
+    display: inline-block;
+    text-transform: none;
+    margin: 0 0 5px;
+    a {
+      color: #333;
+    }
+    a:before {
+      color: $red;
+    }
+}
+.dropdown-panel-title {
+    font-size: 1.3em;
+}
+
+.hours .tb-megamenu .tb-block .block-title {
+    font-size: 1em;
+    color: #fff;
+    line-height: initial;
+    display: inline-block;
+
+}
+
+.tb-megamenu .tb-block i.fa {
+    font-size: 2.5em;
+    margin-right: 9px;
+    color: $red;
+}
+
+.tb-megamenu .dropdown-menu .active > a, .tb-megamenu .dropdown-menu .active > a:hover {
+    color: #eee;
+    text-decoration: none;
+    outline: 0;
+    background-color: #8c2004;
+    background-image: none;
+}
+.tb-megamenu .tours .row-fluid + .row-fluid, .tb-megamenu .computers .row-fluid + .row-fluid {
+    border-top: none;
+    padding-top: 0px;
+}
+
+/*===================================
+=            menu panels            =
+===================================*/
+
+.sub {
+  width: 100%;
+}
+@media (min-width: 1020px) {
+  .sub {
+    width: 1120px;
+    transform: translateX(-210px);
+  }
+}
+
+.sub tbody {
+  border: 0;
+}
+
+.sub tr td:last-child {
+  border-right: 0px;
+}
+
+.tb-megamenu .dropdown-menu .block-panels-mini .node-content a {
+    /* display: initial; */
+    padding: 0;
+    display: initial;
+}
+.tb-megamenu .dropdown-menu .block-content a {
+    padding: initial;
+    display: initial;
+}
+
+@mixin icon($unicode) {
+      &:before {
+        content: $unicode;
+      font-family: Fontawesome;
+      margin-right: 9px;
+      font-size: 1.3em;
+      font-weight: normal;
+      color: $red;
+      }
+}
+.dropdown-panel-title {
+    border-bottom: 1px solid #ccc;
+    margin-top: 10px;
+}
+.tb-megamenu .dropdown-menu a {
+    color: $red;
+}
+
+.tb-megamenu .dropdown-menu li > a {
+    color: $red;
+}
+.askus .dropdown-panel-title h2 a, .section-bar-askus h1#page-title {
+      @include icon("\f1d7");
+}
+.rooms .dropdown-panel-title h2 a, .section-bar-studyrooms h1#page-title {
+      @include icon("\f0c0");
+}
+.guides .dropdown-panel-title h2 a, .section-bar-sg h1#page-title {
+      @include icon("\f007");
+}
+.faq .dropdown-panel-title h2 a {
+      @include icon("\f059");
+}
+.print_scan .dropdown-panel-title h2 a, .section-bar-printing h1#page-title {
+      @include icon("\f02f");
+}
+.databases .dropdown-panel-title h2 a, .section-bar-databases h1#page-title {
+      @include icon("\f002");
+}
+.collections .dropdown-panel-title h2, .section-bar-digital h1#page-title {
+      @include icon("\f03e");
+}
+.tours .dropdown-panel-title h2 a, .section-tours h1#page-title {
+      @include icon("\f05a");
+}
+.computers .dropdown-panel-title h2 a {
+      @include icon("\f109");
+}
+
+// askus
+.libraryh3lp2 {
+  @include span(100%);
+  @include breakpoint(768px) {
+    @include span(4 at 1 of 12);
+  }
+}
+.askus-info {
+  @include span(100%);
+  @include breakpoint(768px) {
+    @include span(8 at 5 of 12 last);
+  }
+}
+
+ // faq
+.tb-megamenu .tb-block ul, .tb-megamenu .tb-block .nav { margin: 1em 0 1em 40px; list-style-type: disc; }
+.tb-megamenu .tb-block ul li, .tb-megamenu .tb-block .nav { list-style-type: disc; }
+.jquery-ui-filter-container { height: initial !important; }
+.ui-accordion .ui-accordion-header { background: none; background-color: #363636; }
+.ui-accordion .ui-accordion-header a { color: white; }
+
+
+// strudy-rooms
+.tb-megamenu .dropdown-menu a.green-button {
+  @include green-button();
+  padding: 0.5em 1.5em !important;
+  margin-top: 10px;
+}
+
+// databases
+@include breakpoint(0 980px) {
+  .databases .tb-block .block-title {
+    display: none;
+}
+.databases .tb-block form {
+    margin: 0px;
+}}
+
+// tours
+#tours-page-link {
+  p {
+    margin: 0;
+  }
+  a{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+/*=====  End of menu panels  ======*/
+.sub .ui-accordion .ui-accordion-header {
+  background: none;
+  padding: .5em .5em .5em 2em;
+  border-radius: 0px;
+  border: 0px;
+  background-color: #eaeae8;
+  /* border-bottom: 1px solid darkgoldenrod; */
+}
+
+.sub .ui-accordion .ui-accordion-content {
+  padding: 0;
+  border-radius: 0px;
+  border: 0px;
+}
+
+.sub .ui-accordion .ui-accordion-header a {
+  color: #2c2c2c;
+  font-size: 1em;
+}
+
+.sub .ui-accordion .ui-accordion-header-active a {
+  color: #5b8c1f;
+}
+
+.sub .ui-accordion-header {
+  border-bottom: 0px;
+}
+
+.tb-megamenu .tb-block ul, .tb-megamenu .tb-block .nav {
+  margin: .6em 0 .6em 33px;
+  list-style-type: disc;
+}
+
+.sub .ui-accordion .ui-accordion-header-active {
+  /* background: brown; */
+  border-bottom: 1px solid #5b8c1f;
+}
+
+.faq .tb-block ul li {
+  font-size: .8em;
+}
+
+.sub .player-ui .ui-state-active, .player-ui .ui-widget-content .ui-state-active, .player-ui .ui-widget-header .ui-state-active {
+  border: 1px solid black;
+  background: #5b8c1f;
+  font-weight: normal;
+  color: #fff;
+}
+
+.sub .player-ui .ui-state-hover {
+  border: 1px solid #5b8c1f;
+  background: $green;
+  font-weight: normal;
+  color: #fff;
+}
+
+div#mediafront_tours_menu_panel_player_2 {
+  box-shadow: none;
+}
+
+.view-tours-menu-panel-player {
+  border: 1px solid #ccc;
+  padding: 4px;
+}
+
+.sub .osmplayer-default-teaser-image {
+  display: none;
+}
+.player-ui .osmplayer-default-playlist-scroll {
+    overflow: scroll !important;
+}
+
+// .placeholder
+.placeholder .block-content {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.placeholder .block-content img {
+    width: 100%;
+}
+
+.placeholder .block-content p {
+    margin: 2px;
+} 
+
+

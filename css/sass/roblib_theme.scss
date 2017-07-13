@@ -1,0 +1,1071 @@
+//********************
+// Variables and mixins and imports
+//********************
+// {{{
+@import "sassy-buttons";
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+@import "susy";
+@import "normalize";
+@import "breakpoint";
+
+@mixin box-sizing($box-model: $default-box-sizing) {
+@if type-of($box-model) == string {
+$box-model: unquote($box-model);
+}
+@include prefixed-properties(css3-boxsizing, $box-sizing-support-threshold, (box-sizing: $box-model));
+}
+
+@mixin letterpress($opacity) {
+    text-shadow: white($opacity) 0 2px 0;
+}
+
+@import "compass/typography/lists/horizontal-list";
+
+$header_black: #333333;
+$white: white;
+$red: #8c2004;
+$green: #5b8c1f;
+$grey1: #f5f4f3;
+$grey2: #eaeae8;
+$dark_grey: #cdcdcc;
+$whitebox-border: #cdcdcc;
+$grey3: #a8a9a7;
+$grey4: #363636;
+$grey5: #2c2c2c;
+
+@mixin green-button() {
+    @include sassy-button("flat", 10px, 19px, $green);
+    @include sassy-button-structure(4px, $sb-font-size, 0.2em 1.4em);
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.green-button {
+    @include green-button;
+}
+
+.layout-table {
+    tbody {
+    border-top: 0px;
+}
+tr td:last-child {
+    border-right: 0px;
+}
+    @include breakpoint(0 780px) {
+        td {
+            display: table-row;
+        }
+    }
+}
+// }}}
+/* **************************************
+/ Typography
+/************************************** */
+// {{{
+#site-name a {
+    letter-spacing: 0px;
+}
+
+#site-name {
+    font-size: 2.5em;
+}
+// }}}
+/* **************************************
+/ Global stuff
+/************************************** */
+// {{{
+/*adds a border around images in the content area*/
+#content img {
+	border: 1px solid #ccc;
+	padding: 4px;
+	border-radius: 4px;
+}
+
+
+#top-panels-wrapper {
+    border-top: 1px solid $grey1;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+h1#page-title {
+    border-bottom: 1px solid #cdcdcc;
+    padding-bottom: 10px;
+}
+
+.content-style a {
+    text-decoration: underline;
+}
+// }}}
+/***************************************
+/ Header
+/************************************** */
+// {{{
+#logo {
+    border-right: solid $grey3 1px;
+}
+
+#site-name {
+    padding-left: 10px;
+    font-variant: small-caps;
+}
+
+#branding {
+    padding: 14px 0 10px 25px;
+    display: table-cell;
+}
+
+#header-wrapper {
+    background-color: $grey1;
+    border-bottom: 1px solid $dark_grey;
+}
+
+/* color overide */
+.nav .block-menu ul li a.active {
+    color: $header_black;
+    background-color: $grey1;
+}
+
+.region-header {
+    padding: 0;
+    line-height: 100%;
+}
+// }}}
+/***************************************
+/ pre-footer
+/************************************** */
+// {{{
+#tertiary-content-wrapper {
+    margin-bottom: 0px;
+    background-color: $grey3;
+    text-align: center;
+    border-bottom: 1px solid $grey4;
+    p {
+        padding-top: 20px;
+    }
+}
+// }}}
+/* **************************************
+/ footer
+/************************************** */
+// {{{
+#footer-panels-wrapper {
+    background: #363636;
+    padding: 25px 0 10px;
+    margin-bottom: 0px;
+    border-top: 1px solid #989996;
+}
+
+#footer-wrapper {
+    background-color: #2c2c2c;
+    border-top: 5px solid $red;
+}
+// }}}
+/* *****************************
+/   Footer links
+***************************** */
+// {{{
+.footer-links {
+    border-left: 1px solid $grey3;
+    padding-left: 15px;
+    margin-left: 20px;
+    h2.title {
+        color: #fff;
+        font-size: 1em;
+    }
+    ul {
+        list-style-image: none;
+        line-height: 95%;
+    }
+    a {
+        color: #ccc;
+        font-size: 12px;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    ul li.leaf {
+        list-style-image: none;
+        list-style-type: none;
+    }
+}
+
+.footer-links.menu-01 {
+    border-left: none;
+}
+
+
+/*=============================================
+* =        Social media footer block            =
+* =============================================*/
+
+ul.social-media li {
+    display: inline-block;
+    width: 43%;
+    text-align: center;
+}
+
+ul.social-media li a:hover {
+    color: #5b8c1f;
+}
+
+ul.social-media li i {
+    font-size: 3em;
+	transition : color 0.3s;
+}
+
+.footer-links .title:nth-of-type(2) {
+    margin-top: 1em;
+    display: block;
+}
+/*=====    Social media footer block  ======*/
+// }}}
+/* *****************************
+/   closure notice block
+***************************** */
+// {{{
+.closure-notice {
+    float: none !important;
+    border: 2px solid $red;
+    background-color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    color: $red;
+    padding: 10px;
+    .block-title {
+        float: none;
+        text-align: center;
+        color: $red;
+    }
+}
+// }}}
+/* *****************************
+/   SubFooter
+***************************** */
+// {{{
+.links-last {
+    color: $grey3;
+    display: flex;
+    a {
+        color: #ccc;
+        font-size: .8em;
+        line-height: 2;
+        padding: 0 4px;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    a:first-child {
+        color: #ccc;
+        font-size: .8em;
+        padding-left: 0px;
+    }
+}
+
+.address {
+    color: white;
+    // line-height: 60%;
+    font-size: .8em;
+    padding-bottom: 5px;
+}
+
+.addressleft {
+    float: left;
+}
+
+#address_right {
+    padding-top: 20px;
+}
+
+.footerlogo {
+    float: left;
+    padding-top: 10px;
+    margin: 0 0 0 22px;
+}
+
+.footeraddress {
+    padding: 30px 0 0 42px;
+}
+
+.socialmedia {
+    float: left;
+    padding-top: 20px;
+    ul {
+        height: auto;
+        padding: 8px 0px;
+        margin: 0px;
+    }
+    li {
+        display: inline;
+    }
+    a {
+        padding: 0 2px;
+        &.flickr img {
+            width: 20px;
+        }
+    }
+}
+// }}}
+/* **************************************
+/ layout testing
+/************************************** */
+// {{{
+#ult {
+    background-color: brown;
+    width: 100%;
+    height: 280px;
+    margin: 0 auto;
+}
+
+#ull {
+    width: 89%;
+    height: 70px;
+    margin: 0 auto;
+}
+
+.content-style {
+    min-height: 0;
+}
+
+#uri {
+    background-color: green;
+    height: 400px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.node-flex-gallery {
+    margin-bottom: -41px;
+}
+// }}}
+/* ==========================================================================
+   front page slider
+   ========================================================================== */
+// {{{
+.flexslider--frontpage .flexslider {
+    margin: 0 0 0px;
+    li {
+        margin-left: 3px;
+    }
+}
+// }}}
+/* ==========================================================================
+   block styles
+   ========================================================================== */
+// {{{
+.sidebar .block {
+    div.block-inner {
+        background: white;
+        // padding: 10px;
+        border: 1px solid #cdcdcc;
+        border-radius: 5px;
+    }
+    .block-title {
+        background: #cdcdcc;
+        border-bottom: 3px solid #8c2004;
+        font-size: 18px;
+        font-weight: normal;
+        padding: 5px;
+    }
+    .content {
+        padding: 10px;
+    }
+}
+// }}}
+/* ==========================================================================
+   book slideshow
+   ========================================================================== */
+// {{{
+.block-new-books-block-1 .flexslider,
+.block-new-books-block .flexslider {
+    margin: 0px;
+}
+// }}}
+/* ==========================================================================
+   library news block
+   ========================================================================== */
+// {{{
+#block-views-event-calendar-block-3 {
+    div.block-inner {
+        background: white;
+        /* padding: 10px; */
+        border: 1px solid #cdcdcc;
+        border-radius: 5px;
+    }
+    .library-news-block {
+        padding: 15px;
+    }
+    li {
+        border-bottom: 1px dotted #cdcdcc;
+        list-style-type: none;
+        margin: 0 0 10px 0;
+    }
+    h2 {
+        background: #cdcdcc;
+        border-bottom: 3px solid #8c2004;
+        font-size: 18px;
+        font-weight: normal;
+        padding: 5px;
+    }
+}
+
+// .block-facetapi {
+//     div.block-inner {
+//         background: white;
+//         /* padding: 10px;
+//         border: 1px solid #cdcdcc;
+//         border-radius: 5px;
+//     }
+//     h2 {
+//         background: #cdcdcc;
+//         border-bottom: 3px solid #8c2004;
+//         font-size: 18px;
+//         font-weight: normal;
+//         padding: 5px;
+//     }
+// }
+// }}}
+/* **************************************
+/ Center Nav bar (full)
+/************************************** */
+// {{{
+ul#nice-menu-1 {
+    float: left;
+    border: 0;
+    border-left: 4px solid $red;
+    border-right: 4px solid $red;
+    width: 98%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #363636;
+    // height: 75px;
+    height: 88px;
+    @include border-radius;
+    @include box-shadow;
+    li {
+        width: 12%;
+        float: left;
+    }
+    li.first {
+        padding-left: 20px;
+    }
+    a {
+        text-align: center;
+        // height: 61px;
+        height: 73px;
+        color: #f3f3f1;
+        padding-top: 1em;
+        font-size: .9em;
+        @include letterpress(0.8);
+    }
+    a:hover {
+        // @include fadeIn(.7s);
+        color: #8c2004;
+        background-color: #C2C2C2;
+    }
+    a:active {
+        // @include bounce;
+   
+    }
+}
+
+nav#block-nice-menus-1 {
+    margin-bottom: 0px;
+}
+
+.icon.fontello {
+    height: 1em;
+}
+
+i.icon.fontello {
+    font-size: 2.5em;
+    padding-bottom: 5px;
+}
+
+.section-bar-printing #nice-menu-1 .active,
+.section-bar-studyrooms #nice-menu-1 .active,
+.section-bar-computer #nice-menu-1 .active,
+.front #nice-menu-1 .active,
+.section-bar-databases #nice-menu-1 .active,
+.section-bar-digital #nice-menu-1 .active,
+.section-bar-sg #nice-menu-1 .active,
+.section-bar-hours #nice-menu-1 .active,
+.section-bar-tutorial #nice-menu-1 .active {
+    background-color: #8c2004;
+    border-bottom: 10px solid #8c2004;
+    color: #f3f3f1;
+    border-radius: 0 0 10px 10px;
+}
+// }}}
+/***************************************
+/ Center Nav bar (responsive)
+/************************************** */
+// {{{
+.responsive-menus.responsified .responsive-menus-simple li a {
+    color: #fff;
+    display: block;
+    padding: 1em 5%;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+// }}}
+/***************************************
+/ Library Hours (block)
+/************************************** */
+// {{{
+section#block-views-current-library-hours-block {
+    // float: right;
+    div.block-inner {
+        background: white;
+        padding: 10px;
+        border: 1px solid #cdcdcc;
+        border-radius: 5px;
+        text-align: center;
+    }
+    h2 {
+        font-size: 16px;
+        text-align: center;
+        text-transform: none;
+    }
+}
+// }}}
+/***************************************
+/ Quick tabs
+/************************************** */
+// {{{
+div#quickset-quicktabs_search_tabs {
+    .block-inner {
+        @include box-shadow;
+    }
+    .node-inner {
+        padding: 0 20px 0 20px;
+    }
+    label {
+        display: inline;
+    }
+    form {
+        margin: 0;
+    }
+    .article {
+        margin: 0;
+    }
+    select {
+        float: left;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    //dropdown on articles tab
+    input.form-submit, input[type="submit"] {
+        background: none;
+        border: none;
+        // @include sassy-button("flat", 10px, 19px, #5b8c1f);
+        @include sassy-button("flat", 10px, 19px, $green);
+        @include sassy-button-structure(4px, $sb-font-size, 0.2em 1.4em);
+        cursor: pointer;
+        margin: 0 5px 0 10px;
+        padding: 5px 11px;
+    }
+}
+
+input#t {
+    width: 50%;
+}
+
+/* accordion */
+
+h3.ui-accordion-header {
+    background: none;
+    background-color: $grey4;
+    a {
+        color: white;
+    }
+}
+
+h3.ui-accordion-header.ui-helper-reset.ui-state-default.ui-corner-all {
+    a {
+        color: white;
+    }
+    &:hover {
+        background: #cdcdcc;
+        a {
+            color: $grey5;
+        }
+    }
+}
+
+.ui-widget-content a {
+    color: $red;
+}
+
+.ui-accordion-content {
+    border-right: 1px solid $whitebox-border;
+    border-bottom: 1px solid $whitebox-border;
+    border-left: 1px solid $whitebox-border;
+    h3 {
+        font-size: 1.1em;
+    }
+    color: $grey5;
+}
+
+.ui-accordion-header {
+    border-bottom: 3px solid $red;
+}
+
+h3.ui-accordion-header.ui-helper-reset.ui-state-active.ui-corner-top {
+    background: #cdcdcc;
+}
+
+div#block-quicktabs-quicktabs-search-tabs {
+    margin-bottom: 5px;
+}
+
+div#guidedFieldSelectors {
+    margin-top: 10px;
+}
+
+ul.quicktabs-tabs.quicktabs-style-zen li {
+    margin: 0px;
+}
+
+div#quicktabs-quicktabs_search_tabs {
+    border: 1px solid #cdcdcc;
+    border-radius: 6px;
+    background-color: $white;
+}
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+    color: $grey5;
+    text-decoration: none;
+}
+
+input#ebscohostsearchtext {
+    width: 70%;
+}
+
+.ui-accordion .ui-accordion-content {
+    padding: 0;
+}
+
+// adds some spacing to the accordion headers
+.acc-header {
+    margin: 10px 0;
+    font-weight: bold;
+}
+.search-accordion .ui-state-active a {
+    color: $green !important;
+}
+// .search-accordion input.form-text {
+//   max-width: 272px;
+//   width: 100%;
+// }// }}}
+/* ==========================================================================
+   landing page buttons
+   ========================================================================== */
+// {{{
+nav.green_landing_page_buttons {
+    .content {
+        // margin-left: 64px;
+        // @media screen and (max-width: 960px) {
+        //     margin-left: 0px;
+        //   }
+   
+    }
+    ul.menu {
+        @include horizontal-list;
+        li {
+            width: 23.6%;
+        }
+        a {
+            @include sassy-button("flat", 10px, 19px, $green);
+            @include sassy-button-structure(4px, $sb-font-size, 0.2em 1.4em);
+            //makin the buttons equal and % based
+            padding: 0.2em 0px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+// }}}
+/* ==========================================================================
+   staff tasks button
+   ========================================================================== */
+// {{{
+div#block-block-123 {
+    /* position: absolute; */
+    margin: 0px;
+    padding: 20px 0 0px 0;
+    height: 25px;
+    .content a {
+        @include sassy-button("flat", 10px, 19px, $green);
+        @include sassy-button-structure(4px, $sb-font-size, 0.2em 1.4em);
+        line-height: 138%;
+    }
+}
+// }}}
+/***************************************
+/ About Us Block
+/************************************** */
+// {{{
+.libraryh3lp, .libraryh3lp2 {
+    iframe {
+        width: 90% !important;
+        border: 1px solid $grey3 !important;
+        @include border-radius;
+        padding: 5px;
+        background-color: #D9D9D9;
+    }
+    div#recv {
+        border: none !important;
+    }
+}
+
+#landing_content_left {
+    width: 60%;
+    float: left;
+}
+
+#landing_content_right {
+    width: 35%;
+    float: left;
+    padding-left: 40px;
+}
+// }}}
+/***************************************
+/ Susy Layout tests
+/************************************** */
+// {{{
+#susytest_cont1 {
+    @include container;
+}
+
+#susytest1 {
+    @include span(6 of 12);
+    background-color: $grey2;
+}
+
+#susytest2 {
+    @include span(6 of 12 last);
+}
+
+#susytest3 {
+    @include span(6 of 12);
+    background-color: $green;
+}
+
+#susytest4 {
+    @include span(6 of 12 last);
+}
+// }}}
+/* ==========================================================================
+   test styles
+   ========================================================================== */
+// {{{
+/* fix padding at top of pages */
+div#content-wrapper {
+    padding-top: 20px;
+}
+// }}}
+/* ==========================================================================
+   Taxonomy Page tweaks
+   ========================================================================== */
+// {{{
+.page-taxonomy-term article.node {
+    border-bottom: 1px solid #ccc;
+}
+
+.page-taxonomy-term h1#page-title {
+    text-transform: capitalize;
+}
+// }}}
+/* ==========================================================================
+   people pages
+   ========================================================================== */
+// {{{
+.node-type-people {
+    .field-name-field-picture {
+        float: left;
+        margin: 10px 10px 0 0;
+        border: 1px solid #cbcbcc;
+        @include border-radius;
+        figure {
+            padding: 7px;
+        }
+    }
+    fieldset.group-bio-info-2 {
+        section {
+            margin-bottom: 4px;
+        }
+        margin-top: 10px;
+        @include border-radius;
+    }
+}
+// }}}
+/* ==========================================================================
+   search page
+   ========================================================================== */
+// {{{
+.section-all-search, #block-roblib-search-roblib-search-form {
+    input.form-submit {
+        background: none;
+        border: none;
+        // @include sassy-button("flat", 10px, 19px, #5b8c1f);
+        @include sassy-button("flat", 10px, 19px, $green);
+        @include sassy-button-structure(4px, $sb-font-size, 0.2em 1.4em);
+        cursor: pointer;
+        margin: 0 5px 0 10px;
+        padding: 6px 20px;
+    }
+}
+
+form.search-form fieldset#edit-advanced {
+    &.collapsed {
+        border: none;
+        background: none;
+    }
+}
+
+.page-search-site article {
+    border: 1px solid #cdcdcc;
+    padding: 0 10px 5px 10px;
+    @include border-radius;
+    .node-content {
+        padding-top: 10px;
+    }
+    .node-header {
+        border-bottom: 1px solid #cdcdcc;
+        line-height: 200%;
+        margin: 5px 0;
+        h1 {
+            margin: 5px 0;
+        }
+    }
+    nav {
+        float: right;
+        a {
+            @include sassy-button("flat", 10px, 19px, $green);
+            @include sassy-button-structure(4px, $sb-font-size, 2px 10px);
+        }
+    }
+}
+
+h2.pane-title.block-title {
+    text-transform: none;
+}
+
+.panel-pane {
+    // @include border-radius;
+    // @include fadeIn(3s);
+}
+// }}}
+/* ==========================================================================
+   header icons
+   ========================================================================== */
+// {{{
+h1#page-title:before {
+    font-family: "fa_islandora";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    color: $red;
+    /* opacity: .8;*/
+    /* For safety - reset parent styles, that can break glyph codes */
+    font-variant: normal;
+    text-transform: none;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+    /* you can be more comfortable with increased icons size */
+    font-size: 150%;
+    /* Uncomment for 3D effect */
+    text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
+}
+
+.section-bar-computer h1#page-title:before {
+    content: '\e835';
+}
+
+.page-node-627 h1#page-title:before {
+    content: '\e811';
+}
+
+.section-bar-databases h1#page-title:before {
+    content: '\e826';
+}
+
+.section-bar-digital h1#page-title:before {
+    content: '\e81c';
+}
+
+.section-bar-hours h1#page-title:before {
+    content: '\e825';
+}
+
+.section-bar-printing h1#page-title:before {
+    content: '\e814';
+}
+
+.section-bar-studyrooms h1#page-title:before {
+    content: '\e823';
+}
+
+.section-bar-sg h1#page-title:before {
+    content: '\e838';
+}
+// }}}
+/* ==========================================================================
+   anchor positioning
+   ========================================================================== */
+// {{{
+// adjust the anchors distance from the top of the page for positioning
+$anchor-offset: -350px;
+
+a.anchor--main-navbar-links {
+    display: block;
+    position: relative;
+    top: $anchor-offset;
+    visibility: hidden;
+}
+// }}}
+/* ==========================================================================
+   askus panel
+   ========================================================================== */
+// {{{
+#block-panels-mini-ask-us-panel {
+    i.icon.fontello {
+        font-size: 1.4em;
+        padding-bottom: 5px;
+    }
+    .content {
+        background: #fff;
+        margin: 0 10px;
+        border: 1px solid rgb(205, 205, 204);
+        border-radius: 4px;
+    }
+    ul {
+        margin: 20px 0 1.5em 20px;
+    }
+    li {
+        font-size: 1.2em;
+    }
+    .panel-pane {
+        border: 0px;
+        margin: 10px;
+        line-height: 1.5em;
+    }
+    .block-inner {
+        margin: 0px;
+    }
+    .askus_text h1 {
+        margin: 0 0 10px 0;
+        color: $red;
+        font-size: 2.4em;
+    }
+    .needs-js {
+        // padding: 10px;
+        // border: 1px solid rgb(205, 205, 204);
+        // text-align: center;
+        // border-radius: 4px;
+   
+    }
+}
+// }}}
+/* ==========================================================================
+   askus dummy block
+   ========================================================================== */
+// {{{
+.dummy-widget {
+    background: #D9D9D9;
+    border: 1px solid #A8A9A7;
+    border-radius: 4px;
+    padding: 10px;
+    h3 {
+        font-size: 18px;
+        color: rgb(140, 32, 4);
+    }
+    .window {
+        background: #FFFFFF;
+        border: 1px solid #A8A9A7;
+        -moz-box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.5);
+        padding: 8px;
+    }
+    .textout {
+        height: 142px;
+        margin: 5px 0 10px;
+    }
+}
+// }}}
+/* ==========================================================================
+   askus menu icon
+   ========================================================================== */
+// {{{
+#nice-menu-2 {
+    i.icon.fontello.icon-chat {
+        font-size: 20px;
+    }
+    li {
+        height: 34px;
+    }
+    li a {
+        padding-top: 7px;
+    }
+    li.menu-item-1507 a {
+        padding-top: 4px;
+    }
+}
+// }}}
+/* ==========================================================================
+   askus widget position fix
+   ========================================================================== */
+// {{{
+#content .panel-display, #content .panel-flexible {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+// }}}
+/* ==========================================================================
+   imports
+   ========================================================================== */
+// {{{
+// new additions
+@import 'summer2015-update';// }}}
+.lib-times dt {
+    float: left;
+    width: 252px;
+    font-weight: initial;
+	font-size: .9em;
+}
+.lib-times dd {
+    margin: 0;
+	font-size: .9em;
+    font-weight: inherit;
+}
+.panel--faq-hours dl {
+    margin: 0;
+    padding: 0;
+}
+
+.faq p {
+    margin: 0;
+    /*margin-top: 10px;*/
+}
+.other-hours {
+	a {
+	font-size: .9em;
+	}
+}
+

@@ -1,0 +1,24 @@
+#block-book-menus-navigation {
+}
+#block-book-menus-navigation .active {
+    font-weight: bold;
+	    text-decoration: underline;
+
+}
+#block-book-menus-navigation .block-title {
+	padding: 6px 8px 3px;
+}
+	
+#block-book-menus-navigation .menu a {
+    font-size: .9em;
+}
+
+li.first.last.expanded.menu-depth-1 {
+    list-style-image: none;
+    list-style-type: none;
+}
+li.first.last.expanded.menu-depth-1 > ul {
+    margin: 0;
+}
+
+

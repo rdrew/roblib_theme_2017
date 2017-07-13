@@ -1,0 +1,97 @@
+/*=================================================================================================================
+=            copied from the pauls roblib search module, the original is blocked in the theme settings            =
+=================================================================================================================*/
+
+/* 
+    Document   : roblib_search.base.css
+    Created on : Apr 9, 2013, 2:00:18 PM
+    Author     : ppound
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*.pane-roblib-search-cufts-roblib-search-cufts-results {background:#f4f4f4 url(../img/bggradientresult.jpg) repeat-x top left;position:relative;padding: 5px;padding-left: 10px;
+            border-left:1px solid #cecfcc; border-right:1px solid #cecfcc; line-height: 1.5em; margin-bottom:10px; border-bottom:1px solid #cecfcc;
+}   */
+
+
+// added a more specific id
+#roblib-search-results .panel-pane {border-top:1px solid #cecfcc;
+            border-left:1px solid #cecfcc; border-right:1px solid #cecfcc; line-height: 1.5em; margin:10px; border-bottom:1px solid #cecfcc;
+}
+
+.roblib-search-more {
+    padding-right:5px;
+}
+.roblib-search-header {
+    background:#333;
+    padding-left: 5px;
+    border-left:solid;
+    color:white;
+    font-weight:lighter;
+    font-family:Verdana,Arial, helvetica, sans-serif;
+}
+.roblib-search-eds-media-header {
+    border-color:indianred;
+    border-left-width: 10px;
+}
+
+.pane-title.block-title{
+    color:inherit;
+    font-weight:inherit;
+}
+.roblib-search-eds-articles-header {
+    border-color:indianred;
+    border-left-width: 10px;
+}
+.roblib-search-cufts-header {
+    border-color:lightblue;
+    border-left-width: 10px;
+}
+.roblib-search-solr-results-header {
+    border-color:lightsalmon;
+    border-left-width: 10px;
+}
+.roblib-search-solr-db-header {
+    border-left-color:darkorange;
+    border-left-width: 10px;
+}
+.roblib-search-solr-guides-header {
+    border-left-color:tomato;
+    border-left-width: 10px;
+}
+
+.roblib-search-solr-reserves-header {
+    border-left-color:#888000;
+    border-left-width: 10px;
+}
+
+.roblib-search-solr-bestbet-header {
+    border-left-color:tan;
+    border-left-width: 10px;
+}
+
+.roblib-search-other-sources-header {
+    border-color:#800000;
+    border-left-width: 10px;
+}
+
+.roblib-search-islandscholar-header {
+    border-left-color:darkolivegreen;
+    border-left-width: 10px;
+ }
+.roblib-search-evergreen-header {
+    border-left-color:forestgreen;
+    border-left-width: 10px;
+}
+
+.roblib-search-row {
+    border-bottom:1px #cecfcc dotted;
+    padding-left:5px;
+}
+.roblib-search-more{
+    text-align: right; font-size: smaller;
+}
+
+/*=====  End of roblib search styles  ======*/
+
